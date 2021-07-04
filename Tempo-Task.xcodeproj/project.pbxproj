@@ -12,6 +12,7 @@
 		C795D0382691A94F0089E038 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D0372691A94F0089E038 /* NewsPresenter.swift */; };
 		C795D03B2691AB590089E038 /* NewsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D03A2691AB590089E038 /* NewsConfigurator.swift */; };
 		C795D03E2691AD3A0089E038 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D03D2691AD3A0089E038 /* NewsRouter.swift */; };
+		C795D0402691BE130089E038 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D03F2691BE130089E038 /* News.swift */; };
 		C7B8782E26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781B26908ED000AC65F1 /* Tempo_TaskApp.swift */; };
 		C7B8783026908ED100AC65F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781C26908ED000AC65F1 /* ContentView.swift */; };
 		C7B8783226908ED100AC65F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B8781D26908ED100AC65F1 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		C795D0372691A94F0089E038 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
 		C795D03A2691AB590089E038 /* NewsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsConfigurator.swift; sourceTree = "<group>"; };
 		C795D03D2691AD3A0089E038 /* NewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouter.swift; sourceTree = "<group>"; };
+		C795D03F2691BE130089E038 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		C7B8781B26908ED000AC65F1 /* Tempo_TaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempo_TaskApp.swift; sourceTree = "<group>"; };
 		C7B8781C26908ED000AC65F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7B8781D26908ED100AC65F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		C795D0302691A8E80089E038 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C795D03F2691BE130089E038 /* News.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				C795D03E2691AD3A0089E038 /* NewsRouter.swift in Sources */,
 				C7B8783026908ED100AC65F1 /* ContentView.swift in Sources */,
 				C7B8782E26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */,
+				C795D0402691BE130089E038 /* News.swift in Sources */,
 				C795D0382691A94F0089E038 /* NewsPresenter.swift in Sources */,
 				C795D03B2691AB590089E038 /* NewsConfigurator.swift in Sources */,
 			);
