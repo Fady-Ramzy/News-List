@@ -14,13 +14,14 @@ class NewsPresenter {
     // MARK: - Properties
     
     weak var view: NewsViewProtocol?
+    var repository: NewsRepositoryProtocol?
     
     // MARK: - Initializer
     
-    init(view: NewsViewProtocol) {
+    init(view: NewsViewProtocol, repository: NewsRepositoryProtocol) {
         self.view = view
+        self.repository = repository
     }
-    
 }
 
 // MARK: - extensions

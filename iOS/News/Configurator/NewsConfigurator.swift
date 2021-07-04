@@ -23,11 +23,12 @@ enum NewsConfigurator: ConfiguratorProtocol {
     var viewcontroller: UIViewController {
         switch self {
         case .list:
-            let newsViewController = NewsViewController()
-            let presenter = NewsPresenter(view: newsViewController)
-            newsViewController.presenter  = presenter
+            let viewcontroller = NewsViewController()
+            let repository = NewsRepository()
+            let presenter = NewsPresenter(view: viewcontroller, repository: repository)
+            viewcontroller.presenter  = presenter
             
-            return newsViewController
+            return viewcontroller
         }
     }
 }
