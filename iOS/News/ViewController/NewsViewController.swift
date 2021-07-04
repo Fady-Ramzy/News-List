@@ -7,15 +7,16 @@
 
 import UIKit
 
-protocol NewsViewProtocol: NSObject {
-    
+protocol NewsViewProtocol: LoadingIndicatorProtocol, NSObject {
+    func reloadData()
 }
 
 class NewsViewController: UIViewController {
 
-    // MARK: - Properties
+    // MARK: - IBOutlets
     
     @IBOutlet private weak var tableView: UITableView!
+    private let tableViewCellIdentifier = "NewsTableViewCell"
     
     // MARK: - Properties
     
@@ -25,6 +26,26 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        showLoadingIndicator()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        hideLoadingIndicator()
+    }
+    
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
     }
 }
 
@@ -38,7 +59,11 @@ extension NewsViewController: UITableViewDelegate {
 
 extension NewsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath) as? NewsTableViewCell else {
+            return UITableViewCell()
+        }
+            
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,5 +73,7 @@ extension NewsViewController: UITableViewDataSource {
 }
 
 extension NewsViewController: NewsViewProtocol {
-    
+    func reloadData() {
+        tableView.reloadData()
+    }
 }
