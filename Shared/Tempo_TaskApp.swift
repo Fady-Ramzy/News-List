@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Tempo_TaskApp: App {
+    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appdelegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          //  ContentView()
         }
     }
 }

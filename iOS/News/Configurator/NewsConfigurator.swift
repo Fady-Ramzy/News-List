@@ -28,7 +28,8 @@ enum NewsConfigurator: ConfiguratorProtocol {
             let presenter = NewsPresenter(view: viewcontroller, repository: repository)
             viewcontroller.presenter  = presenter
             
-            return viewcontroller
+            let navigationController = UINavigationController(rootViewController: viewcontroller)
+            return navigationController
         }
     }
 }

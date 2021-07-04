@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC1009C0BFFCA0BBFC0DC4AC /* libPods-Tempo-Task (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD9284EE1AB497A7AB460B /* libPods-Tempo-Task (iOS).a */; };
+		C70E91522691F4D10013C90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E91512691F4D10013C90E /* AppDelegate.swift */; };
 		C795D0342691A9180089E038 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D0322691A9180089E038 /* NewsViewController.swift */; };
 		C795D0352691A9180089E038 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C795D0332691A9180089E038 /* NewsViewController.xib */; };
 		C795D0382691A94F0089E038 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D0372691A94F0089E038 /* NewsPresenter.swift */; };
@@ -27,6 +28,7 @@
 		31315AB17A56EB6871D30239 /* Pods-Tempo-Task (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-Task (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Tempo-Task (iOS)/Pods-Tempo-Task (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		84BD9284EE1AB497A7AB460B /* libPods-Tempo-Task (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tempo-Task (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B083EFEF51BA147B2C433F /* Pods-Tempo-Task (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-Task (iOS).release.xcconfig"; path = "Target Support Files/Pods-Tempo-Task (iOS)/Pods-Tempo-Task (iOS).release.xcconfig"; sourceTree = "<group>"; };
+		C70E91512691F4D10013C90E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C795D0322691A9180089E038 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C795D0332691A9180089E038 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		C795D0372691A94F0089E038 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
@@ -62,7 +64,6 @@
 				31315AB17A56EB6871D30239 /* Pods-Tempo-Task (iOS).debug.xcconfig */,
 				B1B083EFEF51BA147B2C433F /* Pods-Tempo-Task (iOS).release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -72,6 +73,14 @@
 				84BD9284EE1AB497A7AB460B /* libPods-Tempo-Task (iOS).a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C70E91502691F4C20013C90E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C70E91512691F4D10013C90E /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		C795D02E2691A8D30089E038 /* News */ = {
@@ -194,6 +203,7 @@
 		C7B8782426908ED100AC65F1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C70E91502691F4C20013C90E /* App */,
 				C795D0542691DBB20089E038 /* Core */,
 				C795D02E2691A8D30089E038 /* News */,
 				C7B8782526908ED100AC65F1 /* Info.plist */,
@@ -297,6 +307,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C70E91522691F4D10013C90E /* AppDelegate.swift in Sources */,
 				C795D0342691A9180089E038 /* NewsViewController.swift in Sources */,
 				C795D03E2691AD3A0089E038 /* NewsRouter.swift in Sources */,
 				C795D0562691DBC90089E038 /* LoadingIndicator.swift in Sources */,
