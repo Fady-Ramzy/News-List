@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C7B8782E26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781B26908ED000AC65F1 /* Tempo_TaskApp.swift */; };
-		C7B8782F26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781B26908ED000AC65F1 /* Tempo_TaskApp.swift */; };
 		C7B8783026908ED100AC65F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781C26908ED000AC65F1 /* ContentView.swift */; };
-		C7B8783126908ED100AC65F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781C26908ED000AC65F1 /* ContentView.swift */; };
 		C7B8783226908ED100AC65F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B8781D26908ED100AC65F1 /* Assets.xcassets */; };
-		C7B8783326908ED100AC65F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B8781D26908ED100AC65F1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,20 +18,10 @@
 		C7B8781D26908ED100AC65F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7B8782226908ED100AC65F1 /* Tempo-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempo-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7B8782526908ED100AC65F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7B8782A26908ED100AC65F1 /* Tempo-Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tempo-Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7B8782C26908ED100AC65F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C7B8782D26908ED100AC65F1 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C7B8781F26908ED100AC65F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7B8782726908ED100AC65F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,7 +36,6 @@
 			children = (
 				C7B8781A26908ED000AC65F1 /* Shared */,
 				C7B8782426908ED100AC65F1 /* iOS */,
-				C7B8782B26908ED100AC65F1 /* macOS */,
 				C7B8782326908ED100AC65F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				C7B8782226908ED100AC65F1 /* Tempo-Task.app */,
-				C7B8782A26908ED100AC65F1 /* Tempo-Task.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,15 +64,6 @@
 				C7B8782526908ED100AC65F1 /* Info.plist */,
 			);
 			path = iOS;
-			sourceTree = "<group>";
-		};
-		C7B8782B26908ED100AC65F1 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				C7B8782C26908ED100AC65F1 /* Info.plist */,
-				C7B8782D26908ED100AC65F1 /* macOS.entitlements */,
-			);
-			path = macOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,23 +86,6 @@
 			productReference = C7B8782226908ED100AC65F1 /* Tempo-Task.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C7B8782926908ED100AC65F1 /* Tempo-Task (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C7B8783926908ED100AC65F1 /* Build configuration list for PBXNativeTarget "Tempo-Task (macOS)" */;
-			buildPhases = (
-				C7B8782626908ED100AC65F1 /* Sources */,
-				C7B8782726908ED100AC65F1 /* Frameworks */,
-				C7B8782826908ED100AC65F1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Tempo-Task (macOS)";
-			productName = "Tempo-Task (macOS)";
-			productReference = C7B8782A26908ED100AC65F1 /* Tempo-Task.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -137,9 +96,6 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					C7B8782126908ED100AC65F1 = {
-						CreatedOnToolsVersion = 12.5.1;
-					};
-					C7B8782926908ED100AC65F1 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -158,7 +114,6 @@
 			projectRoot = "";
 			targets = (
 				C7B8782126908ED100AC65F1 /* Tempo-Task (iOS) */,
-				C7B8782926908ED100AC65F1 /* Tempo-Task (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -172,14 +127,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7B8782826908ED100AC65F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7B8783326908ED100AC65F1 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -189,15 +136,6 @@
 			files = (
 				C7B8783026908ED100AC65F1 /* ContentView.swift in Sources */,
 				C7B8782E26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C7B8782626908ED100AC65F1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7B8783126908ED100AC65F1 /* ContentView.swift in Sources */,
-				C7B8782F26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,50 +296,6 @@
 			};
 			name = Release;
 		};
-		C7B8783A26908ED100AC65F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fadyramzy.Tempo-Task";
-				PRODUCT_NAME = "Tempo-Task";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		C7B8783B26908ED100AC65F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = macOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fadyramzy.Tempo-Task";
-				PRODUCT_NAME = "Tempo-Task";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -419,15 +313,6 @@
 			buildConfigurations = (
 				C7B8783726908ED100AC65F1 /* Debug */,
 				C7B8783826908ED100AC65F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C7B8783926908ED100AC65F1 /* Build configuration list for PBXNativeTarget "Tempo-Task (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C7B8783A26908ED100AC65F1 /* Debug */,
-				C7B8783B26908ED100AC65F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
