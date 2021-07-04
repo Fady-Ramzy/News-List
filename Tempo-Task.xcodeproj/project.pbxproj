@@ -10,6 +10,8 @@
 		C795D0342691A9180089E038 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D0322691A9180089E038 /* NewsViewController.swift */; };
 		C795D0352691A9180089E038 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C795D0332691A9180089E038 /* NewsViewController.xib */; };
 		C795D0382691A94F0089E038 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D0372691A94F0089E038 /* NewsPresenter.swift */; };
+		C795D03B2691AB590089E038 /* NewsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D03A2691AB590089E038 /* NewsConfigurator.swift */; };
+		C795D03E2691AD3A0089E038 /* NewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D03D2691AD3A0089E038 /* NewsRouter.swift */; };
 		C7B8782E26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781B26908ED000AC65F1 /* Tempo_TaskApp.swift */; };
 		C7B8783026908ED100AC65F1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B8781C26908ED000AC65F1 /* ContentView.swift */; };
 		C7B8783226908ED100AC65F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B8781D26908ED100AC65F1 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 		C795D0322691A9180089E038 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C795D0332691A9180089E038 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		C795D0372691A94F0089E038 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
+		C795D03A2691AB590089E038 /* NewsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsConfigurator.swift; sourceTree = "<group>"; };
+		C795D03D2691AD3A0089E038 /* NewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRouter.swift; sourceTree = "<group>"; };
 		C7B8781B26908ED000AC65F1 /* Tempo_TaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tempo_TaskApp.swift; sourceTree = "<group>"; };
 		C7B8781C26908ED000AC65F1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C7B8781D26908ED100AC65F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,10 +44,12 @@
 		C795D02E2691A8D30089E038 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				C795D03C2691AD290089E038 /* Router */,
+				C795D0392691AB330089E038 /* Configurator */,
 				C795D0362691A9340089E038 /* View */,
 				C795D0312691A8EE0089E038 /* ViewController */,
-				C795D0302691A8E80089E038 /* Model */,
 				C795D02F2691A8E00089E038 /* Presenter */,
+				C795D0302691A8E80089E038 /* Model */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -77,6 +83,22 @@
 				C795D0332691A9180089E038 /* NewsViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C795D0392691AB330089E038 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				C795D03A2691AB590089E038 /* NewsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		C795D03C2691AD290089E038 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C795D03D2691AD3A0089E038 /* NewsRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		C7B8781526908ED000AC65F1 = {
@@ -185,9 +207,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C795D0342691A9180089E038 /* NewsViewController.swift in Sources */,
+				C795D03E2691AD3A0089E038 /* NewsRouter.swift in Sources */,
 				C7B8783026908ED100AC65F1 /* ContentView.swift in Sources */,
 				C7B8782E26908ED100AC65F1 /* Tempo_TaskApp.swift in Sources */,
 				C795D0382691A94F0089E038 /* NewsPresenter.swift in Sources */,
+				C795D03B2691AB590089E038 /* NewsConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
