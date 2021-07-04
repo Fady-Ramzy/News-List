@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-  
+    
     // MARK: - Properties
     
     var window: UIWindow?
@@ -24,7 +24,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     
     func setupRootViewController() {
-        let viewcontroller = NewsConfigurator.list.viewcontroller
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let viewcontrol  = NewsConfigurator.list.viewcontroller
         window?.rootViewController = viewcontroller
+        window?.makeKeyAndVisible()
     }
 }
