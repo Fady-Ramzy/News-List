@@ -15,6 +15,10 @@ class NewsViewController: UIViewController {
 
     // MARK: - Properties
     
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Properties
+    
     var presenter: NewsPresenterProtocol?
     
     // MARK: - View life cycle
@@ -25,6 +29,23 @@ class NewsViewController: UIViewController {
 }
 
 // MARK: - extensions
+
+extension NewsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+extension NewsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+
+}
 
 extension NewsViewController: NewsViewProtocol {
     
