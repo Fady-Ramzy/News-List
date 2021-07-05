@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+@UIApplicationMain
 class AppDelegate: NSObject, UIApplicationDelegate {
     
     // MARK: - Properties

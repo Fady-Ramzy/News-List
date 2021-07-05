@@ -32,15 +32,8 @@ class NewsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        showLoadingIndicator()
+        presenter?.fetchArticles()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        hideLoadingIndicator()
-    }
-    
     
     private func setupTableView() {
         tableView.delegate = self

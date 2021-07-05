@@ -6,16 +6,33 @@
 //
 
 import Foundation
+import ObjectMapper
 
-struct News {
+struct News: Mappable {
     
     // MARK: - Properties
     
+    var author: String?
     var title: String?
     var description: String?
-    var author: String?
-    var source: String?
-    var Content: String?
-    var date: String?
-    var image: String?
+    var url: URL?
+    var imageURL: URL?
+    var publishAt: String?
+    var content: String?
+    
+    // MARK: - Initializer
+    
+    init?(map: Map) {}
+    
+    // MARK: - Mapping Methods
+    
+    mutating func mapping(map: Map) {
+        author <- map["author"]
+        title <- map["title"]
+        description <- map["description"]
+        url <- map["url"]
+        imageURL <- map["imageURL"]
+        publishAt <- map["publishAt"]
+        content <- map["content"]
+    }
 }

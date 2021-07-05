@@ -7,7 +7,9 @@
 
 import Foundation
 
-protocol NewsPresenterProtocol {}
+protocol NewsPresenterProtocol {
+    func fetchArticles()
+}
 
 class NewsPresenter {
     
@@ -28,4 +30,18 @@ class NewsPresenter {
 
 extension NewsPresenter: NewsPresenterProtocol {
     
+    // MARK: - Methods
+    
+    func fetchArticles() {
+        view?.showLoadingIndicator()
+        repository?.fetchNews(with: "apple", from: "2021-07-04", to: "2021-07-04", completionHandler: { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+                case .success(let articles): break
+                case .failure(let error): break
+            }
+            self.view?.hideLoadingIndicator()
+        })
+    }
 }
