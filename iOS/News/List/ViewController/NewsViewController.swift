@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol NewsViewProtocol: LoadingIndicatorProtocol, NSObject {
+protocol NewsViewProtocol: LoadingIndicatorProtocol, NavigationRoute, NSObject {
     func reloadData()
     func showErrorPopup(with errorMessage: String)
 }
@@ -42,7 +42,8 @@ class NewsViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "NewsTableViewCell", bundle: Bundle(for: NewsViewController.self)), forCellReuseIdentifier: "NewsTableViewCell")
+        tableView.register(UINib(nibName: tableViewCellIdentifier, bundle: Bundle(for: NewsViewController.self)), forCellReuseIdentifier: tableViewCellIdentifier)
+        tableView.tableFooterView = UIView()
     }
 }
 
@@ -50,7 +51,7 @@ class NewsViewController: UIViewController {
 
 extension NewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Navigate to the news details
+        presenter?.didSelectNews(at: indexPath.row)
     }
     	
 }

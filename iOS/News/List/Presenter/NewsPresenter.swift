@@ -13,6 +13,7 @@ protocol NewsPresenterProtocol {
     var numberOfItems: Int { get }
     var newsUIModelList: [NewsUIModel] { set get }
     
+    func didSelectNews(at index: Int)
     func fetchArticles()
 }
 
@@ -50,6 +51,10 @@ extension NewsPresenter: NewsPresenterProtocol {
     }
     
     // MARK: - Methods
+    
+    func didSelectNews(at index: Int) {
+        view?.navigate(to: NewsRouter.details(news: newsUIModelList[index]))
+    }
     
     func fetchArticles() {
         view?.showLoadingIndicator()

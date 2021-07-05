@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol NewsDetailsViewProtocol: NSObject {
     func updateUI(with news: NewsUIModel)
@@ -15,17 +16,30 @@ class NewsDetailsViewController: UIViewController {
 
     // MARK: - IBOutlets
     
+    @IBOutlet private weak var newsImageView: UIImageView!
+    @IBOutlet private weak var newsTitle: UILabel!
+    @IBOutlet private weak var newsDescription: UILabel!
+    
+    // MARK: - Properties
+    
+    var presenter: NewsDetailsPresenterProtocol?
+    
     // MARK: - View life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter?.updateUI()
+        navigationController?.isNavigationBarHidden = false
     }
 }
 
 // MARK: - extensions
 
-extension NewsViewController: NewsDetailsViewProtocol {
+extension NewsDetailsViewController: NewsDetailsViewProtocol {
     func updateUI(with news: NewsUIModel) {
-        
+        newsImageView.kf.setImage(with: news.imageURL)
+        newsTitle.text = news.title
+        newsDescription.text = news.description
     }
 }

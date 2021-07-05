@@ -17,6 +17,7 @@ enum NewsConfigurator: ConfiguratorProtocol {
     // MARK: - Cases
     
     case list
+    case details(news: NewsUIModel)
     
     
     // MARK: - Properties
@@ -31,6 +32,12 @@ enum NewsConfigurator: ConfiguratorProtocol {
             let navigationController = UINavigationController(rootViewController: viewcontroller)
             
             return navigationController
+        case .details(let news):
+            let viewcontroller = NewsDetailsViewController()
+            let presenter = NewsDetailsPresenter(view: viewcontroller, news: news)
+            viewcontroller.presenter = presenter
+            
+            return viewcontroller
         }
     }
 }

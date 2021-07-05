@@ -8,6 +8,7 @@
 import Foundation
 
 protocol NewsDetailsPresenterProtocol {
+    func updateUI()
 }
 
 
@@ -29,5 +30,7 @@ class NewsDetailsPresenter {
 // MARK: - extensions
 
 extension NewsDetailsPresenter: NewsDetailsPresenterProtocol {
-    
+    func updateUI() {
+        view?.updateUI(with: news)
+    }
 }

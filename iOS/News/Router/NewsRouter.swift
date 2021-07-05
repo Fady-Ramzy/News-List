@@ -8,30 +8,28 @@
 import Foundation
 import UIKit
 
-protocol RouterProtocol {
-    var presentationStyle: UIModalPresentationStyle { get }
-    var viewcontroller: UIViewController { get }
-}
-
 enum NewsRouter: RouterProtocol {
     
     // MARK: - Cases
     
     case list
+    case details(news: NewsUIModel)
     
     // MARK: - Properties
     
-    var presentationStyle: UIModalPresentationStyle {
+    var navigationStyle: NavigationStyle {
         switch self {
-        case .list:
-            return .fullScreen
+        case .list, .details:
+            return .push(animated: true)
         }
     }
     
-    var viewcontroller: UIViewController {
+    var destinationViewController: UIViewController {
         switch self {
         case .list:
             return NewsConfigurator.list.viewcontroller
+        case .details(let news):
+            return NewsConfigurator.details(news: news).viewcontroller
         }
     }
 }
