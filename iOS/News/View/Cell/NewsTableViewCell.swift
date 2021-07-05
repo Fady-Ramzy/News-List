@@ -17,9 +17,9 @@ class NewsTableViewCell: UITableViewCell {
     
     // MARK: - Methods
     
-    func configure(with title: String?, description: String?, image: UIImage?) {
-        newsTitle.text = title
-        newsDescription.text = description
-        newsImageView.image = image
+    func configure(with news: NewsUIModel?) {
+        newsTitle.text = news?.title
+        newsDescription.text = news?.description
+        newsImageView.image = news?.image
     }
 }

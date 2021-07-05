@@ -7,7 +7,12 @@
 
 import Foundation
 
+
+
 protocol NewsPresenterProtocol {
+    var numberOfItems: Int { get }
+    var newsUIModelList: [NewsUIModel] { set get }
+    
     func fetchArticles()
 }
 
@@ -15,8 +20,9 @@ class NewsPresenter {
     
     // MARK: - Properties
     
-    weak var view: NewsViewProtocol?
-    var repository: NewsRepositoryProtocol?
+    private weak var view: NewsViewProtocol?
+    private var repository: NewsRepositoryProtocol?
+    var newsUIModelList: [NewsUIModel] = []
     
     // MARK: - Initializer
     
@@ -24,11 +30,24 @@ class NewsPresenter {
         self.view = view
         self.repository = repository
     }
+    
+    // MARK: - Method
+    
+    func mapNewsToUIModel(with newsList: [News]?) -> [NewsUIModel] {
+        guard let list = newsList else { return [] }
+        
+        return list.map({ news in
+            return NewsUIModel(title: news.title, description: news.description, image: nil)
+        })
+    }
 }
 
 // MARK: - extensions
 
 extension NewsPresenter: NewsPresenterProtocol {
+    var numberOfItems: Int {
+        return newsUIModelList.count
+    }
     
     // MARK: - Methods
     
@@ -38,8 +57,11 @@ extension NewsPresenter: NewsPresenterProtocol {
             guard let self = self else { return }
             
             switch result {
-                case .success(let articles): break
-                case .failure(let error): break
+            case .success(let articles):
+                self.newsUIModelList =  self.mapNewsToUIModel(with: articles.list)
+                self.view?.reloadData()
+                case .failure(let error):
+                    self.view?.showErrorPopup(with: error.localizedDescription)
             }
             self.view?.hideLoadingIndicator()
         })

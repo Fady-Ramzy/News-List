@@ -9,6 +9,7 @@ import UIKit
 
 protocol NewsViewProtocol: LoadingIndicatorProtocol, NSObject {
     func reloadData()
+    func showErrorPopup(with errorMessage: String)
 }
 
 class NewsViewController: UIViewController {
@@ -26,6 +27,8 @@ class NewsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupTableView()
     }
     
     
@@ -38,7 +41,7 @@ class NewsViewController: UIViewController {
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(NewsTableViewCell.self, forCellReuseIdentifier: tableViewCellIdentifier)
+        tableView.register(UINib(nibName: "NewsTableViewCell", bundle: Bundle(for: NewsViewController.self)), forCellReuseIdentifier: "NewsTableViewCell")
     }
 }
 
@@ -48,6 +51,7 @@ extension NewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
+    
 }
 
 extension NewsViewController: UITableViewDataSource {
@@ -55,12 +59,13 @@ extension NewsViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellIdentifier, for: indexPath) as? NewsTableViewCell else {
             return UITableViewCell()
         }
-            
+        cell.configure(with: presenter?.newsUIModelList[indexPath.row])
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return presenter?.numberOfItems ?? 0
     }
 
 }
@@ -68,5 +73,13 @@ extension NewsViewController: UITableViewDataSource {
 extension NewsViewController: NewsViewProtocol {
     func reloadData() {
         tableView.reloadData()
+    }
+    
+    func showErrorPopup(with errorMessage: String) {
+        let alertViewController = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertViewController.addAction(alertAction)
+        
+        present(alertViewController, animated: true, completion: nil)
     }
 }
