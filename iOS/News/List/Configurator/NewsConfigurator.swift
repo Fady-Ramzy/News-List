@@ -18,6 +18,7 @@ enum NewsConfigurator: ConfiguratorProtocol {
     
     case list
     
+    
     // MARK: - Properties
     
     var viewcontroller: UIViewController {
