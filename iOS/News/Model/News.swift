@@ -15,8 +15,8 @@ struct News: Mappable {
     var author: String?
     var title: String?
     var description: String?
-    var url: URL?
-    var imageURL: URL?
+    var url: String?
+    var imageURL: String?
     var publishAt: String?
     var content: String?
     
@@ -31,7 +31,7 @@ struct News: Mappable {
         title <- map["title"]
         description <- map["description"]
         url <- map["url"]
-        imageURL <- map["imageURL"]
+        imageURL <- map["urlToImage"]
         publishAt <- map["publishAt"]
         content <- map["content"]
     }

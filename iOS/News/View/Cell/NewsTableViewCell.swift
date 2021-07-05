@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NewsTableViewCell: UITableViewCell {
     
@@ -20,6 +21,6 @@ class NewsTableViewCell: UITableViewCell {
     func configure(with news: NewsUIModel?) {
         newsTitle.text = news?.title
         newsDescription.text = news?.description
-        newsImageView.image = news?.image
+        newsImageView.kf.setImage(with: news?.imageURL)
     }
 }

@@ -37,7 +37,7 @@ class NewsPresenter {
         guard let list = newsList else { return [] }
         
         return list.map({ news in
-            return NewsUIModel(title: news.title, description: news.description, image: nil)
+            return NewsUIModel(title: news.title, description: news.description, imageURL: URL(string: news.imageURL ?? ""))
         })
     }
 }

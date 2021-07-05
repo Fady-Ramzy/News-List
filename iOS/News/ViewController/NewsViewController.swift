@@ -17,10 +17,10 @@ class NewsViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet private weak var tableView: UITableView!
-    private let tableViewCellIdentifier = "NewsTableViewCell"
     
     // MARK: - Properties
     
+    private let tableViewCellIdentifier = "NewsTableViewCell"
     var presenter: NewsPresenterProtocol?
     
     // MARK: - View life cycle
@@ -29,6 +29,7 @@ class NewsViewController: UIViewController {
         super.viewDidLoad()
         
         setupTableView()
+        navigationController?.isNavigationBarHidden = true
     }
     
     
@@ -49,9 +50,9 @@ class NewsViewController: UIViewController {
 
 extension NewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        // Navigate to the news details
     }
-    
+    	
 }
 
 extension NewsViewController: UITableViewDataSource {

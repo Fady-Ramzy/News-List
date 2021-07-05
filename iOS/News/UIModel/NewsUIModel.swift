@@ -9,9 +9,10 @@ import Foundation
 import UIKit
 
 struct NewsUIModel {
+    
     //  MARK: - Properties
     
     var title: String?
     var description: String?
-    var image: UIImage?
+    var imageURL: URL?
 }
