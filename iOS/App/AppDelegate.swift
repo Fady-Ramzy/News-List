@@ -26,7 +26,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     func setupRootViewController() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let viewcontroller  = NewsConfigurator.list.viewcontroller
+        let viewcontroller  = RootRouter.root.destinationViewController
         window?.rootViewController = viewcontroller
         window?.makeKeyAndVisible()
     }
