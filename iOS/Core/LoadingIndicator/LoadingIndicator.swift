@@ -9,11 +9,6 @@ import Foundation
 import NVActivityIndicatorView
 
 protocol LoadingIndicatorProtocol {
-
-    // MARK: - Properties
-    
-    var loadingIndicator: UIView { get }
-    
     // MARK: - Functions
     
     func showLoadingIndicator()
@@ -24,24 +19,17 @@ extension LoadingIndicatorProtocol where Self: UIViewController {
     
     // MARK: - Properties
     
-    var loadingIndicator: UIView {
-        var nvActivityIndicatorView: NVActivityIndicatorView!
-        
-        guard let view = nvActivityIndicatorView else {
-            nvActivityIndicatorView = NVActivityIndicatorView(frame: view.frame, type: .ballBeat, color: .gray)
-            
-            return nvActivityIndicatorView
-        }
-        
-        return view
-    }
-    
-    
     func showLoadingIndicator() {
-        (loadingIndicator as? NVActivityIndicatorView)?.startAnimating()
+        let nvActivityIndicatorView = NVActivityIndicatorView(frame: view.frame, type: .ballBeat, color: .blue)
+        nvActivityIndicatorView.startAnimating()
+        view.addSubview(nvActivityIndicatorView)
     }
     
     func hideLoadingIndicator() {
-        (loadingIndicator as? NVActivityIndicatorView)?.stopAnimating()
+        view.subviews.forEach { view in
+            if view is NVActivityIndicatorView {
+                (view as? NVActivityIndicatorView)?.stopAnimating()
+            }
+        }
     }
 }

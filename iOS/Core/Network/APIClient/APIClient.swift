@@ -23,7 +23,6 @@ extension APIClientProtocol {
     
     func startRequest(with request: Request, completionHandler:  @escaping APICompletionHandler) {
         AF.request(fullURL(from: request.path, queryParameters: request.queryParameters)! , method: request.httpMethod, parameters: request.parameters, encoding: request.paramtersEncoding, headers: request.httpHeaders, interceptor: nil, requestModifier: nil).responseJSON { response in
-            
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))

@@ -10,14 +10,17 @@ import UIKit
 
 enum RootRouter: RouterProtocol {
     
+    // MARK: - Cases
+    
     case root
+    
+    // MARK: - Properties
     
     var navigationStyle: NavigationStyle {
         switch self {
         case .root:
             return .push(animated: true)
         }
-        
     }
     
     var destinationViewController: UIViewController {
