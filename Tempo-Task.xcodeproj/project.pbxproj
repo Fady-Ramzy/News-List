@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8D6E2D52A2A8145C7C1B200 /* libPods-Tempo-TaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ABDCE9B893463F0A6E676804 /* libPods-Tempo-TaskTests.a */; };
 		BC1009C0BFFCA0BBFC0DC4AC /* libPods-Tempo-Task (iOS).a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BD9284EE1AB497A7AB460B /* libPods-Tempo-Task (iOS).a */; };
 		C70E91522691F4D10013C90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E91512691F4D10013C90E /* AppDelegate.swift */; };
 		C70E9156269206C70013C90E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E9155269206C70013C90E /* APIClient.swift */; };
@@ -20,6 +21,11 @@
 		C70E91702693930C0013C90E /* NewsDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E916F2693930C0013C90E /* NewsDetailsPresenter.swift */; };
 		C70E91732693ABD00013C90E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E91722693ABD00013C90E /* Router.swift */; };
 		C70E91762693B14B0013C90E /* NavigationRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E91752693B14B0013C90E /* NavigationRoute.swift */; };
+		C70E91962693B6B60013C90E /* NewsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E91952693B6B60013C90E /* NewsViewMock.swift */; };
+		C70E919A2693B6EB0013C90E /* NewsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E91992693B6EB0013C90E /* NewsRepositoryMock.swift */; };
+		C70E919C2693B7030013C90E /* NewsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70E919B2693B7030013C90E /* NewsPresenterTest.swift */; };
+		C77540222693DC1500BC58B1 /* NewsDetailsViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77540212693DC1500BC58B1 /* NewsDetailsViewMock.swift */; };
+		C77540242693DC2B00BC58B1 /* NewsDetailsPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C77540232693DC2B00BC58B1 /* NewsDetailsPresenterTest.swift */; };
 		C795D0342691A9180089E038 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D0322691A9180089E038 /* NewsViewController.swift */; };
 		C795D0352691A9180089E038 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C795D0332691A9180089E038 /* NewsViewController.xib */; };
 		C795D0382691A94F0089E038 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C795D0372691A94F0089E038 /* NewsPresenter.swift */; };
@@ -33,9 +39,22 @@
 		C7B8783226908ED100AC65F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7B8781D26908ED100AC65F1 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C70E918E2693B6840013C90E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7B8781626908ED000AC65F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7B8782126908ED100AC65F1;
+			remoteInfo = "Tempo-Task (iOS)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		23B3EA664E4C16BD2C262C4F /* Pods-Tempo-TaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-TaskTests.release.xcconfig"; path = "Target Support Files/Pods-Tempo-TaskTests/Pods-Tempo-TaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		28E75EFA18079AC0F78D4EF2 /* Pods-Tempo-TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-Tempo-TaskTests/Pods-Tempo-TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		31315AB17A56EB6871D30239 /* Pods-Tempo-Task (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-Task (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Tempo-Task (iOS)/Pods-Tempo-Task (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		84BD9284EE1AB497A7AB460B /* libPods-Tempo-Task (iOS).a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tempo-Task (iOS).a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABDCE9B893463F0A6E676804 /* libPods-Tempo-TaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tempo-TaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B083EFEF51BA147B2C433F /* Pods-Tempo-Task (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tempo-Task (iOS).release.xcconfig"; path = "Target Support Files/Pods-Tempo-Task (iOS)/Pods-Tempo-Task (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		C70E91512691F4D10013C90E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C70E9155269206C70013C90E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -49,6 +68,13 @@
 		C70E916F2693930C0013C90E /* NewsDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsPresenter.swift; sourceTree = "<group>"; };
 		C70E91722693ABD00013C90E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C70E91752693B14B0013C90E /* NavigationRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRoute.swift; sourceTree = "<group>"; };
+		C70E91892693B6840013C90E /* Tempo-TaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tempo-TaskTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70E918D2693B6840013C90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C70E91952693B6B60013C90E /* NewsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewMock.swift; sourceTree = "<group>"; };
+		C70E91992693B6EB0013C90E /* NewsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepositoryMock.swift; sourceTree = "<group>"; };
+		C70E919B2693B7030013C90E /* NewsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenterTest.swift; sourceTree = "<group>"; };
+		C77540212693DC1500BC58B1 /* NewsDetailsViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsViewMock.swift; sourceTree = "<group>"; };
+		C77540232693DC2B00BC58B1 /* NewsDetailsPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsPresenterTest.swift; sourceTree = "<group>"; };
 		C795D0322691A9180089E038 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C795D0332691A9180089E038 /* NewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		C795D0372691A94F0089E038 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
@@ -65,6 +91,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C70E91862693B6840013C90E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8D6E2D52A2A8145C7C1B200 /* libPods-Tempo-TaskTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7B8781F26908ED100AC65F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +115,8 @@
 			children = (
 				31315AB17A56EB6871D30239 /* Pods-Tempo-Task (iOS).debug.xcconfig */,
 				B1B083EFEF51BA147B2C433F /* Pods-Tempo-Task (iOS).release.xcconfig */,
+				28E75EFA18079AC0F78D4EF2 /* Pods-Tempo-TaskTests.debug.xcconfig */,
+				23B3EA664E4C16BD2C262C4F /* Pods-Tempo-TaskTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -89,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				84BD9284EE1AB497A7AB460B /* libPods-Tempo-Task (iOS).a */,
+				ABDCE9B893463F0A6E676804 /* libPods-Tempo-TaskTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,6 +247,75 @@
 			path = NavigationRoute;
 			sourceTree = "<group>";
 		};
+		C70E918A2693B6840013C90E /* Tempo-TaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				C775401D2693DBCB00BC58B1 /* News-Details */,
+				C70E91932693B6890013C90E /* News-List */,
+				C70E918D2693B6840013C90E /* Info.plist */,
+			);
+			path = "Tempo-TaskTests";
+			sourceTree = "<group>";
+		};
+		C70E91932693B6890013C90E /* News-List */ = {
+			isa = PBXGroup;
+			children = (
+				C70E91982693B6C80013C90E /* Repository */,
+				C70E91972693B6BE0013C90E /* Presenter */,
+				C70E91942693B6A10013C90E /* View */,
+			);
+			path = "News-List";
+			sourceTree = "<group>";
+		};
+		C70E91942693B6A10013C90E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C70E91952693B6B60013C90E /* NewsViewMock.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C70E91972693B6BE0013C90E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C70E919B2693B7030013C90E /* NewsPresenterTest.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C70E91982693B6C80013C90E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C70E91992693B6EB0013C90E /* NewsRepositoryMock.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C775401D2693DBCB00BC58B1 /* News-Details */ = {
+			isa = PBXGroup;
+			children = (
+				C77540202693DBF100BC58B1 /* View */,
+				C775401F2693DBE700BC58B1 /* Presenter */,
+			);
+			path = "News-Details";
+			sourceTree = "<group>";
+		};
+		C775401F2693DBE700BC58B1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C77540232693DC2B00BC58B1 /* NewsDetailsPresenterTest.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C77540202693DBF100BC58B1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C77540212693DC1500BC58B1 /* NewsDetailsViewMock.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C795D02E2691A8D30089E038 /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +415,7 @@
 			children = (
 				C7B8781A26908ED000AC65F1 /* Shared */,
 				C7B8782426908ED100AC65F1 /* iOS */,
+				C70E918A2693B6840013C90E /* Tempo-TaskTests */,
 				C7B8782326908ED100AC65F1 /* Products */,
 				16D37DF5BF6F0AA948A9CC08 /* Pods */,
 				71EE18385ACEC5A822BDC5EB /* Frameworks */,
@@ -327,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B8782226908ED100AC65F1 /* Tempo-Task.app */,
+				C70E91892693B6840013C90E /* Tempo-TaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -345,6 +453,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C70E91882693B6840013C90E /* Tempo-TaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C70E91922693B6840013C90E /* Build configuration list for PBXNativeTarget "Tempo-TaskTests" */;
+			buildPhases = (
+				4C8909D1ED3D97E304CE4D7E /* [CP] Check Pods Manifest.lock */,
+				C70E91852693B6840013C90E /* Sources */,
+				C70E91862693B6840013C90E /* Frameworks */,
+				C70E91872693B6840013C90E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C70E918F2693B6840013C90E /* PBXTargetDependency */,
+			);
+			name = "Tempo-TaskTests";
+			productName = "Tempo-TaskTests";
+			productReference = C70E91892693B6840013C90E /* Tempo-TaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C7B8782126908ED100AC65F1 /* Tempo-Task (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7B8783626908ED100AC65F1 /* Build configuration list for PBXNativeTarget "Tempo-Task (iOS)" */;
@@ -372,6 +499,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					C70E91882693B6840013C90E = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = C7B8782126908ED100AC65F1;
+					};
 					C7B8782126908ED100AC65F1 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -391,11 +522,19 @@
 			projectRoot = "";
 			targets = (
 				C7B8782126908ED100AC65F1 /* Tempo-Task (iOS) */,
+				C70E91882693B6840013C90E /* Tempo-TaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C70E91872693B6840013C90E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7B8782026908ED100AC65F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,9 +571,43 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4C8909D1ED3D97E304CE4D7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tempo-TaskTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C70E91852693B6840013C90E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C77540242693DC2B00BC58B1 /* NewsDetailsPresenterTest.swift in Sources */,
+				C77540222693DC1500BC58B1 /* NewsDetailsViewMock.swift in Sources */,
+				C70E919A2693B6EB0013C90E /* NewsRepositoryMock.swift in Sources */,
+				C70E91962693B6B60013C90E /* NewsViewMock.swift in Sources */,
+				C70E919C2693B7030013C90E /* NewsPresenterTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7B8781E26908ED100AC65F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,7 +636,60 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C70E918F2693B6840013C90E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7B8782126908ED100AC65F1 /* Tempo-Task (iOS) */;
+			targetProxy = C70E918E2693B6840013C90E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C70E91902693B6840013C90E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28E75EFA18079AC0F78D4EF2 /* Pods-Tempo-TaskTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tempo-TaskTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fadyramzy.Tempo-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tempo-Task.app/Tempo-Task";
+			};
+			name = Debug;
+		};
+		C70E91912693B6840013C90E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23B3EA664E4C16BD2C262C4F /* Pods-Tempo-TaskTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Tempo-TaskTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fadyramzy.Tempo-TaskTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tempo-Task.app/Tempo-Task";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		C7B8783426908ED100AC65F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -625,6 +851,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C70E91922693B6840013C90E /* Build configuration list for PBXNativeTarget "Tempo-TaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C70E91902693B6840013C90E /* Debug */,
+				C70E91912693B6840013C90E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C7B8781926908ED000AC65F1 /* Build configuration list for PBXProject "Tempo-Task" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -22,6 +22,16 @@ struct News: Mappable {
     
     // MARK: - Initializer
     
+    init(author: String?, title: String?, description: String?, url: String?, imageURL: String?, publishAt: String?, content: String?) {
+        self.author = author
+        self.title = title
+        self.description = description
+        self.url = url
+        self.imageURL = imageURL
+        self.publishAt = publishAt
+        self.content = content
+    }
+    
     init?(map: Map) {}
     
     // MARK: - Mapping Methods

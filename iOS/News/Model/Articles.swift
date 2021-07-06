@@ -18,6 +18,12 @@ struct Articles: Mappable {
     
     // MARK: - Initializers
     
+    init(status: String?, totalResults: Int?, list: [News]?) {
+        self.status = status
+        self.totalResults = totalResults
+        self.list = list
+    }
+    
     init?(map: Map) {}
     
     // MARK: - Mapping Methods

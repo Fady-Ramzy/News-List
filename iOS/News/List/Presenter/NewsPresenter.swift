@@ -41,6 +41,18 @@ class NewsPresenter {
             return NewsUIModel(title: news.title, description: news.description, imageURL: URL(string: news.imageURL ?? ""))
         })
     }
+    
+    func showLoadingIndicator() {
+        view?.showLoadingIndicator()
+    }
+    
+    func hideLoadingIndicator() {
+        view?.hideLoadingIndicator()
+    }
+    
+    func reloadData() {
+        view?.reloadData()
+    }
 }
 
 // MARK: - extensions
@@ -57,18 +69,18 @@ extension NewsPresenter: NewsPresenterProtocol {
     }
     
     func fetchArticles() {
-        view?.showLoadingIndicator()
+        showLoadingIndicator()
         repository?.fetchNews(with: "apple", from: "2021-07-04", to: "2021-07-04", completionHandler: { [weak self] result in
             guard let self = self else { return }
             
             switch result {
             case .success(let articles):
                 self.newsUIModelList =  self.mapNewsToUIModel(with: articles.list)
-                self.view?.reloadData()
+                self.reloadData()
                 case .failure(let error):
                     self.view?.showErrorPopup(with: error.localizedDescription)
             }
-            self.view?.hideLoadingIndicator()
+            self.hideLoadingIndicator()
         })
     }
 }
