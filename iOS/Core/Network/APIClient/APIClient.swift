@@ -12,7 +12,7 @@ typealias APICompletionHandler = (Result<Any, AFError>) -> Void
 
 protocol APIClientProtocol {
     func startRequest(with request: Request, completionHandler:  @escaping APICompletionHandler)
-    func fullURL(from path: String, queryParameters: [URLQueryItem]?) -> URL?
+    func fullURL(from path: String, queryParameters: [URLQueryItem]?) -> URL
 }
 
 // MARK: - extensions
@@ -22,7 +22,7 @@ extension APIClientProtocol {
     // MARK: - Functions
     
     func startRequest(with request: Request, completionHandler:  @escaping APICompletionHandler) {
-        AF.request(fullURL(from: request.path, queryParameters: request.queryParameters)! , method: request.httpMethod, parameters: request.parameters, encoding: request.paramtersEncoding, headers: request.httpHeaders, interceptor: nil, requestModifier: nil).responseJSON { response in
+        AF.request(fullURL(from: request.path, queryParameters: request.queryParameters) , method: request.httpMethod, parameters: request.parameters, encoding: request.paramtersEncoding, headers: request.httpHeaders, interceptor: nil, requestModifier: nil).responseJSON { response in
             switch response.result {
             case .success(let data):
                 completionHandler(.success(data))
@@ -51,18 +51,26 @@ class APIClient: APIClientProtocol {
     
     // MARK: - Functions
     
-    func fullURL(from path: String, queryParameters: [URLQueryItem]?) -> URL? {
+    func fullURL(from path: String, queryParameters: [URLQueryItem]?) -> URL {
         var urlComponents = URLComponents(string: path)
         let apiKeyQueryParamter = URLQueryItem(name: apiKey, value: apiKeyValue)
         let sortByQueryParameter = URLQueryItem(name: sortByKey, value: sortByValue)
         urlComponents?.queryItems = [sortByQueryParameter, apiKeyQueryParamter]
         
+        guard var components = urlComponents, let url = components.url else {
+            return URL(string: path)!
+        }
+        
         guard queryParameters != nil, queryParameters?.isEmpty == false else {
-            return urlComponents?.url
+            return url
         }
        
-        urlComponents?.queryItems! += queryParameters ?? []
+        guard components.query != nil, components.queryItems?.isEmpty == false else {
+            return url
+        }
         
-        return urlComponents?.url
+        components.queryItems! += queryParameters ?? []
+        
+        return components.url!
     }
 }

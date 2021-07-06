@@ -13,16 +13,14 @@ import UIKit
 class NewsViewMock: NSObject, NewsViewProtocol {
     
     // MARK: - Properties
+    
     var didShowLoadingIndicator: Bool = false
     var didHideLoadingIndicator: Bool = false
     var didReloadData: Bool = false
     var didShowErrorPopup: Bool = false
     var didNavigate: Bool = false
-    var loadingIndicator: UIView {
-        return UIView()
-    }
     
-    // MARK: - Functions
+    // MARK: - Methods
     
     func showErrorPopup(with errorMessage: String) {
         didShowErrorPopup = true

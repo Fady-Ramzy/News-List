@@ -74,19 +74,19 @@ class NewsPresenterTest: XCTestCase {
         XCTAssertTrue(view.didReloadData)
     }
     
-        func test_didSelectItemAtIndex_shouldNavigateToNewsDetails() {
-            // Given
-            
-            presenter.newsUIModelList = [NewsUIModel(title: "title1", description: "description1", imageURL: nil)]
-            
-            // When
-    
-            presenter.didSelectNews(at: 0)
-    
-            // Then
-    
-            XCTAssertTrue(view.didNavigate)
-        }
+    func test_didSelectItemAtIndex_shouldNavigateToNewsDetails() {
+        // Given
+        
+        presenter.newsUIModelList = [NewsUIModel(title: "title1", description: "description1", imageURL: nil)]
+        
+        // When
+        
+        presenter.didSelectNews(at: 0)
+        
+        // Then
+        
+        XCTAssertTrue(view.didNavigate)
+    }
     
     func test_fetchNews_shouldShowLoadingIndicator() {
         // Given
